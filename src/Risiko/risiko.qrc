@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/Risiko">
+        <file alias="standardMap">Resources/map.gif</file>
+        <file alias="standardMapPic">Resources/map.jpg</file>
+        <file alias="standardMapText">Resources/map.txt</file>
+        <file alias="prgIcon">Resources/prgIcon.png</file>
+    </qresource>
+</RCC>

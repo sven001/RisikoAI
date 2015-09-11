@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RisikoClass</class>
+ <widget class="QMainWindow" name="RisikoClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>705</width>
+    <height>499</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Risiko</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="RiskMapGraphicsView" name="boardGraphicsView"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>705</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuDatei">
+    <property name="title">
+     <string>Datei</string>
+    </property>
+    <addaction name="actionKarte_laden"/>
+    <addaction name="actionAI_Wettkampf"/>
+   </widget>
+   <addaction name="menuDatei"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="actionKarte_laden">
+   <property name="text">
+    <string>Karte laden</string>
+   </property>
+  </action>
+  <action name="actionAI_Wettkampf">
+   <property name="text">
+    <string>AI Wettkampf</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>RiskMapGraphicsView</class>
+   <extends>QGraphicsView</extends>
+   <header>riskmapgraphicsview.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="risiko.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionKarte_laden</sender>
+   <signal>triggered()</signal>
+   <receiver>RisikoClass</receiver>
+   <slot>loadMap()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>348</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAI_Wettkampf</sender>
+   <signal>triggered()</signal>
+   <receiver>RisikoClass</receiver>
+   <slot>aiContest()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>352</x>
+     <y>249</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>352</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>loadMap()</slot>
+  <slot>nextPhase()</slot>
+  <slot>aiContest()</slot>
+ </slots>
+</ui>
