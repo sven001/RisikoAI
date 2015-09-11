@@ -11,3 +11,4 @@ To start hacking your own ai follow these steps:
 7. Compile your solution
 8. Call <exampleProjectName>\RisikoAI\DeployQT.bat
 9. Find an executable in <exampleProjectName>\install\
+10. Play around with RiskAISimple and try to kill TitanNet!
